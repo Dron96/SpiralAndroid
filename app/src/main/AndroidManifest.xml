@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.spiral">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/spiral"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/spiral"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Spiral">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:label="Главное меню" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreatePatientActivity"
+            android:screenOrientation="portrait"
+            android:label="Создание пациента" />
+        <activity
+            android:name=".ChoosePatient"
+            android:screenOrientation="portrait"
+            android:label="Выберите пациента" />
+        <activity
+            android:name=".BadHabitsActivity"
+            android:screenOrientation="portrait"
+            android:label="Плохие привычки" />
+        <activity
+            android:name=".SpiralActivity"
+            android:screenOrientation="portrait"
+            android:label="Спираль" />
+        <activity
+            android:name=".InSpiralActivity"
+            android:screenOrientation="portrait"
+            android:label="Врисование" />
+        <activity
+            android:name=".CopySpiralActivity"
+            android:screenOrientation="portrait"
+            android:label="Копия" />
+    </application>
+
+</manifest>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePatientActivity"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secondNameLayout"
+        style="@style/TextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <EditText
+            android:id="@+id/secondName"
+            android:imeOptions="actionNext"
+            style="@style/EditTextStyle"
+            android:inputType="textCapWords"
+            android:hint="@string/second_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstNameLayout"
+        style="@style/TextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondNameLayout" >
+
+        <EditText
+            android:id="@+id/firstName"
+            android:imeOptions="actionNext"
+            style="@style/EditTextStyle"
+            android:hint="@string/first_name"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/middleNameLayout"
+        style="@style/TextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameLayout" >
+
+        <EditText
+            android:id="@+id/middleName"
+            android:imeOptions="actionNext"
+            android:hint="@string/middle_name"
+            style="@style/EditTextStyle"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateOfBirthLayout"
+        style="@style/TextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middleNameLayout" >
+
+        <EditText
+            android:id="@+id/dateOfBirth"
+            android:imeOptions="actionDone"
+            style="@style/EditTextStyle"
+            android:hint="@string/date_of_birth"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/diagnosis_text"
+        android:text="@string/diagnosis_text"
+        style="@style/TextViewStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfBirthLayout" />
+
+    <Spinner
+        android:id="@+id/diagnosis"
+        android:entries="@array/diagnosis"
+        style="@style/SpinnerStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosis_text" />
+
+    <TextView
+        android:id="@+id/sex_text"
+        android:text="@string/sex_text"
+        style="@style/TextViewStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diagnosis" />
+
+    <RadioGroup
+        android:id="@+id/sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sex_text"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/sex_male"
+            android:text="@string/male"
+            android:checked="true"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/sex_female"
+            android:text="@string/female"
+            style="@style/RadioButtonStyle" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dominant_hand_text"
+        android:text="@string/dominant_hand_text"
+        style="@style/TextViewStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sex" />
+
+    <RadioGroup
+        android:id="@+id/dominant_hand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dominant_hand_text"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/right_hand"
+            android:text="@string/right_hand"
+            android:checked="true"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/left_hand"
+            android:text="@string/left_hand"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/both_hand"
+            android:text="@string/both_hand"
+            style="@style/RadioButtonStyle" />
+
+    </RadioGroup>
+
+    <Button
+        android:onClick="createPatientFolder"
+        android:id="@+id/create_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/create_patient"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

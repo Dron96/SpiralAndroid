@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BadHabitsActivity">
+
+    <TextView
+        android:id="@+id/bad_habits_header"
+        android:text="@string/bad_habits_header"
+        style="@style/TextViewStyle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCoffee"
+        android:text="@string/coffee"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bad_habits_header" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEnergetics"
+        android:text="@string/energetics"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCoffee" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSmoke"
+        android:text="@string/smoke"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxEnergetics" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAlcohol"
+        android:text="@string/alcohol"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSmoke" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDrugs"
+        android:text="@string/drugs"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAlcohol" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPhysical"
+        android:text="@string/physical"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDrugs" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNone"
+        android:text="@string/none"
+        style="@style/CheckboxStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPhysical" />
+
+    <Button
+        android:id="@+id/create_patient"
+        android:onClick="collectContraindications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/confirm"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

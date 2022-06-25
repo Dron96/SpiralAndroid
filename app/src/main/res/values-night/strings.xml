@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spiral</string>
+    <string name="create_patient">Создать пациента</string>
+    <string name="select_a_patient">Выбрать пациента</string>
+    <string name="exit">Выход</string>
+    <string name="second_name">Фамилия</string>
+    <string name="first_name">Имя</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="diagnosis_text">Диагноз:</string>
+    <string name="sex_text">Пол</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="dominant_hand_text">Доминирующая рука</string>
+    <string name="right_hand">Правая</string>
+    <string name="left_hand">Левая</string>
+    <string name="both_hand">Обе</string>
+    <string name="middle_name">Отчество</string>
+    <string name="bad_habits_header">Выберите все пункты, которые Вы применяли за 2 часа до исследования:</string>
+    <string name="coffee">Кофе</string>
+    <string name="energetics">Энергетические напитки</string>
+    <string name="smoke">Сигареты, кальян, сигары и тд</string>
+    <string name="alcohol">Алкогольсодержащие напитки</string>
+    <string name="drugs">Спиртосодержащие лекарства (валокордин, валосердин и др)</string>
+    <string name="physical">Физические нагрузки</string>
+    <string name="none">Ничего из вышеперечисленного</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="Next">Далее</string>
+    <string-array name="diagnosis">
+        <item>Здоров</item>
+        <item>Эссенциальный тремор</item>
+        <item>Болезнь Паркинсона</item>
+        <item>Дистония</item>
+        <item>Рассеянный склероз</item>
+        <item>Гиперкинезы</item>
+        <item>Тиреотоксикоз (гипертиреоз)</item>
+        <item>Другое</item>
+    </string-array>
+</resources>
